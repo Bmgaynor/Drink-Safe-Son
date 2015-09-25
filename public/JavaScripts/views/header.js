@@ -1,0 +1,22 @@
+/**
+ * Created by gay9511 on 9/25/2015.
+ */
+window.HeaderView = Backbone.View.extend({
+
+    initialize: function () {
+        this.render();
+    },
+
+    render: function () {
+        $(this.el).html(this.template());
+        return this;
+    },
+
+    selectMenuItem: function (menuItem) {
+        $('.nav li').removeClass('active');
+        if (menuItem) {
+            $('.' + menuItem).addClass('active');
+        }
+    }
+
+});
